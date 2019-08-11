@@ -4,7 +4,7 @@ from page.page import Page
 
 class TestClearCache:
     def setup(self):
-        self.driver = init_driver(True)
+        self.driver = init_driver(False)
         self.page = Page()
     def test_clear_cache(self):
         self.page.home.login_is_not(self.page)
