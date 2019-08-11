@@ -1,15 +1,16 @@
-from base.base_driver import init_driver
+
 from page.about_page import AboutPage
 from page.home_page import HomePage
 from page.login_page import LoginPage
 from page.me_page import MePage
 from page.register_page import RegisterPage
 from page.setting_page import SettingPage
+from page.vip_page import VipPage
 
 
 class Page:
-    def __init__(self):
-        self.driver = init_driver(True)
+    def __init__(self,driver):
+        self.driver = driver
     @property
     def home(self):
         return HomePage(self.driver)
@@ -33,3 +34,7 @@ class Page:
     @property
     def about(self):
         return AboutPage(self.driver)
+
+    @property
+    def vip(self):
+        return VipPage(self.driver)

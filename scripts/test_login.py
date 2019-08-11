@@ -9,7 +9,7 @@ from page.page import Page
 class TestLogin:
     def setup(self):
         self.driver = init_driver(False)
-        self.page = Page()
+        self.page = Page(self.driver)
     def teardown(self):
         time.sleep(5)
         self.driver.quit()

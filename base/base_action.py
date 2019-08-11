@@ -3,6 +3,7 @@
 # 定位元素，返回元素，需要传入特征feature,
 # 设置显式等待，设置默认等待时间，频率。实际工作中，可以根据实际需要，修改等待时间
 # 封装点击，输入，清空的操作
+import time
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -88,6 +89,15 @@ class BasePage:
                     print("到底了")
                     raise Exception("没有你定位的元素")
                 page_source = self.driver.page_source
+
+    def is_keyword_in_page_source(self,keyword,timeout=10,poll=0.1):
+        end_time = time.time() + timeout
+        while True:
+            if end_time < time.time():
+                return False
+            if keyword in self.driver.page_source:
+                return True
+            time.sleep(poll)
 
 
 
