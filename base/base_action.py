@@ -43,6 +43,13 @@ class BasePage:
             return True
         except TimeoutException:
             return False
+    # 是否存在指定特征的元素对象
+    def is_feature_exist(self,feature):
+        try:
+            self.find_element(feature)
+            return True
+        except TimeoutException:
+            return False
     # 获取toast消息
     def get_toast_text(self,message):
         if self.is_toast_exist(message):

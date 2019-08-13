@@ -13,6 +13,7 @@ class TestUpdate:
         self.driver.quit()
     def test_update(self):
         self.page.home.login_is_not(self.page)
+        time.sleep(3)
         self.page.me.click_setting_btn()
         self.page.setting.click_about_aolai_btn()
         self.page.about.click_update()

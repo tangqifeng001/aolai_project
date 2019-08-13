@@ -19,6 +19,7 @@ class TestVip:
         code = args["code"]
         expect = args["expect"]
         self.page.home.login_is_not(self.page)
+        time.sleep(3)
         self.page.me.click_be_vip_btn()
         self.driver.switch_to.context("WEBVIEW_com.yunmall.lc")
         self.page.vip.input_invite_code(code)
