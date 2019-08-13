@@ -1,14 +1,14 @@
 test_login:
   test_login_001:
-    username: "itheima_test"
-    password: "itheima"
+    username: "tangqifeng"
+    password: "123456"
     toast: Null
   test_login_002:
-    username: "itheima_test123"
-    password: "itheima"
+    username: "tangqifeng23"
+    password: "123456"
     toast: "此用户不存在"
   test_login_003:
-    username: "itheima_test"
-    password: "itheima123"
+    username: "tangqifeng"
+    password: "12345678"
     toast: "登录密码错误"
 

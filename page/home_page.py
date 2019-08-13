@@ -21,8 +21,8 @@ class HomePage(BasePage):
         # 点击 已有账号
         page.register.click_register()
         # 输入用户名
-        page.login.input_username("itheima_test")
+        page.login.input_username("tangqifeng")
         # 输入密码
-        page.login.input_password("itheima")
+        page.login.input_password("123456")
         # 点击登录
         page.login.click_login_btn()
