@@ -9,7 +9,9 @@ from page.home_page import HomePage
 from page.login_page import LoginPage
 from page.me_page import MePage
 from page.register_page import RegisterPage
+from page.search_page import SearchPage
 from page.setting_page import SettingPage
+from page.shop_cart_page import ShopCartPage
 from page.vip_page import VipPage
 
 
@@ -63,3 +65,12 @@ class Page:
     @property
     def goods_list(self):
         return GoodsListPage(self.driver)
+
+    @property
+    def shop_cart(self):
+        return ShopCartPage(self.driver)
+
+    @property
+    def search(self):
+        return SearchPage(self.driver)
+

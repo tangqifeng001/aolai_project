@@ -1,0 +1,7 @@
+test_search:
+  test_search_001:
+    keyword: "毛巾"
+  test_search_002:
+    keyword: "面膜"
+  test_search_003:
+    keyword: "女装"

@@ -26,8 +26,6 @@ class GoodDetailPage(BasePage):
 
     # 根据 "请选择 分类 规格" 获取 请选择后面的第一个规格的名字
     def get_choose_spec(self, text):
-        print(text)
-        print(text.split(" ")[1])
         return text.split(" ")[1]
 
     # 选择规格
@@ -38,7 +36,7 @@ class GoodDetailPage(BasePage):
             if self.is_toast_exist("请选择"):
                 spec_name = self.get_choose_spec(self.get_toast_text("请选择"))
                 spec_feature = By.XPATH, "//*[@text='%s']/../*[2]/*[1]" % spec_name
-                self.click(spec_feature)
+                self.find_element_with_scroll(spec_feature).click()
                 time.sleep(6)
             else:
                 break
