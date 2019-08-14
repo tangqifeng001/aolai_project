@@ -23,7 +23,7 @@ class TestSearch:
         self.page.home.click_search_btn()
         self.page.search.input_search_kwd(kwd)
         self.page.search.click_search_btn()
-        time.sleep(3)
+        time.sleep(5)
         self.page.search.press_back()
         # 断言
         xpath_feature = By.XPATH,"//*[@resource-id='com.yunmall.lc:id/keyayout']/*/*[@text='%s']" % kwd
