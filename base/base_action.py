@@ -37,7 +37,7 @@ class BasePage:
         self.driver.press_keycode(66)
     # 是否存在toast
     def is_toast_exist(self,message):
-        message_xpath = By.XPATH,"//*[contains(@text,%s)]" % message
+        message_xpath = By.XPATH,"//*[contains(@text, '%s')]" % message
         try:
             self.find_element(message_xpath, 5, 0.1)
             return True
@@ -53,8 +53,8 @@ class BasePage:
     # 获取toast消息
     def get_toast_text(self,message):
         if self.is_toast_exist(message):
-            message_xpath = By.XPATH, "//*[contains(@text,%s)]" % message
-            return self.find_element(message_xpath,5,0.1)
+            message_xpath = By.XPATH, "//*[contains(@text, '%s')]" % message
+            return self.find_element(message_xpath,5,0.1).text
         else:
             raise Exception("toast没有出现在屏幕上")
 

@@ -1,7 +1,10 @@
 
 from page.about_page import AboutPage
 from page.address_list_page import AddressListPage
+from page.category_page import CategoryPage
 from page.edit_address_page import EditAddressPage
+from page.good_detail_page import GoodDetailPage
+from page.goods_list_page import GoodsListPage
 from page.home_page import HomePage
 from page.login_page import LoginPage
 from page.me_page import MePage
@@ -48,3 +51,15 @@ class Page:
     @property
     def edit_address(self):
         return EditAddressPage(self.driver)
+
+    @property
+    def category(self):
+        return CategoryPage(self.driver)
+
+    @property
+    def good_detail(self):
+        return GoodDetailPage(self.driver)
+
+    @property
+    def goods_list(self):
+        return GoodsListPage(self.driver)
